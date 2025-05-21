@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Locale, defaultLocale } from "@/i18n/settings";
 import { initTranslations } from "@/i18n/server";
 import { TranslationsProvider } from "@/i18n/TranslationsProvider";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { getAllFontVariables, inter, robotoMono } from "@/utils/fontLoader";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// Get combined font variables for optimal font loading
+const fontVariables = getAllFontVariables();
 
 export const metadata: Metadata = {
   title: "Next.js Multilanguage Template",
@@ -38,7 +31,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100`}
+        className={`${fontVariables} antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100`}
       >
         <TranslationsProvider
           locale={locale}
