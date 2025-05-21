@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Multilanguage Template
 
-## Getting Started
+![Next.js Version](https://img.shields.io/badge/Next.js-15.3.2-blue)
+![React Version](https://img.shields.io/badge/React-19.0.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
+![i18n](https://img.shields.io/badge/i18n-Built--in-green)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.0-blue)
 
-First, run the development server:
+A production-ready, feature-rich Next.js template designed to kickstart your multilingual web applications. This template provides a solid foundation with industry best practices for performance, internationalization, and developer experience.
+
+## ✨ Features
+
+### 🌐 Built-in Internationalization
+- Complete i18n setup with Next.js App Router
+- Language switching with cookie persistence
+- Automatic language detection
+- Typed translations with TypeScript support
+
+### 🚀 Performance Optimizations
+- Optimized image loading with blur placeholders and responsive sizing
+- Component lazy loading with Suspense boundaries
+- Font optimization with preloading and swap strategies
+- Optimized script loading for third-party scripts
+- Route prefetching for faster navigation
+- Deferred loading of non-critical resources
+
+### 📝 Form Validation
+- Zod schema validation for type-safe forms
+- Integration with React Hook Form
+- Server-side validation utilities
+- Type inference from schemas to TypeScript types
+
+### 🎨 Modern UI Foundation
+- TailwindCSS setup with dark mode support
+- Responsive design out of the box
+- Clean component architecture
+- Optimized for accessibility
+
+### 🧰 Developer Experience
+- TypeScript configured for maximum type safety
+- ESLint and Prettier for code quality
+- Husky for pre-commit hooks
+- Ready-to-use directory structure
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm, yarn, or pnpm
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/nextjs-template.git my-project
+cd my-project
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📋 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── public/             # Static assets
+├── src/
+│   ├── app/            # Next.js App Router pages
+│   │   ├── [lang]/     # Language-specific routes
+│   │   ├── api/        # API routes
+│   │   └── layout.tsx  # Root layout
+│   ├── components/     # Reusable components
+│   │   ├── forms/      # Form components
+│   │   └── ui/         # UI components
+│   ├── i18n/           # Internationalization setup
+│   ├── lib/            # Utility libraries
+│   │   └── validations/# Zod schemas
+│   ├── locales/        # Translation files
+│   └── utils/          # Utility functions
+├── .eslintrc.js        # ESLint configuration
+├── next.config.ts      # Next.js configuration
+├── postcss.config.js   # PostCSS configuration
+├── tailwind.config.js  # Tailwind CSS configuration
+└── tsconfig.json       # TypeScript configuration
+```
 
-## Learn More
+## 🌐 Internationalization
 
-To learn more about Next.js, take a look at the following resources:
+This template includes a complete i18n setup for multiple languages:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Current supported languages: English (en), Spanish (es), Portuguese (pt)
+- Add new languages by creating new folders in `src/locales/`
+- Use the language switcher component to change languages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Example usage in components:
 
-## Deploy on Vercel
+```tsx
+'use client'
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+import { useTranslation } from 'react-i18next'
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+export function MyComponent() {
+  const { t } = useTranslation()
+  
+  return <h1>{t('welcome')}</h1>
+}
+```
+
+## ⚡ Performance Examples
+
+Check out the performance examples page at `/[lang]/performance-examples` to see demonstrations of:
+
+1. Optimized image loading
+2. Component lazy loading
+3. Route prefetching
+4. Optimized script loading
+5. Font optimization
+
+## 📝 Form Validation
+
+The template includes Zod for form validation. See examples at `/[lang]/form-examples`.
+
+Usage example:
+
+```tsx
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { contactFormSchema, type ContactFormValues } from '@/lib/validations/contact'
+
+const form = useForm<ContactFormValues>({
+  resolver: zodResolver(contactFormSchema),
+  defaultValues: {
+    name: '',
+    email: '',
+  },
+})
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+### Bundle Analysis
+
+To analyze the bundle size, run:
+
+```bash
+ANALYZE=true npm run build
+```
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [TailwindCSS Documentation](https://tailwindcss.com/docs)
+- [Zod Documentation](https://zod.dev/)
+- [React Hook Form Documentation](https://react-hook-form.com/)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+Developed with ❤️ using Next.js 15.3.2 and React 19
