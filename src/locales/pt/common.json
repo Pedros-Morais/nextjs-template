@@ -1,0 +1,42 @@
+{
+  "app_title": "NextLingo - Aplicação Multilíngue",
+  "welcome": "Crie Aplicações Multilíngues com Next.js Facilmente",
+  "description": "NextLingo fornece uma arquitetura limpa e escalável para criar aplicações multilíngues com o App Router do Next.js. O suporte para internacionalização (i18n) nunca foi tão simples.",
+  "language_selector": "Selecionar idioma",
+  "not_found": "Página não encontrada",
+  "footer": {
+    "rights": "Todos os direitos reservados",
+    "powered_by": "Desenvolvido com Next.js"
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "contact": "Contato",
+    "documentation": "Documentação"
+  },
+  "features": {
+    "title": "Funcionalidades",
+    "subtitle": "NextLingo torna sites multilíngues simples com estas poderosas funcionalidades",
+    "feature1": {
+      "title": "Rotas por idioma",
+      "description": "Caminhos de URL amigáveis para SEO com códigos de idioma que melhoram a descoberta e experiência do usuário"
+    },
+    "feature2": {
+      "title": "Troca rápida",
+      "description": "Mudança de idioma sem interrupções com persistência por cookies para visitantes recorrentes"
+    },
+    "feature3": {
+      "title": "Detecção automática",
+      "description": "Detecção inteligente de idioma baseada nas preferências do navegador e configurações do usuário"
+    }
+  },
+  "languages": {
+    "title": "Idiomas suportados",
+    "add_more": "Adicionar mais idiomas é tão fácil quanto criar novos arquivos de tradução"
+  },
+  "cta": {
+    "title": "Comece a criar aplicações multilíngues hoje",
+    "description": "Use este modelo como ponto de partida para seu próximo projeto multilíngue. Faça um fork do repositório e personalize-o para atender às suas necessidades.",
+    "button": "Começar"
+  }
+}
