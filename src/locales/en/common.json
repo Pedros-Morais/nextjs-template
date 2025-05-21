@@ -1,42 +1,8 @@
 {
-  "app_title": "NextLingo - Multilingual App",
-  "welcome": "Build Multilingual Next.js Applications with Ease",
-  "description": "NextLingo provides a clean, scalable architecture for building multi-language applications with Next.js's App Router. Support for internationalization (i18n) has never been this simple.",
+  "app_title": "Next.js Multilanguage Template",
+  "hello": "Hello",
+  "welcome_message": "Welcome to this Next.js multilanguage template! A clean starting point for your project.",
   "language_selector": "Select language",
   "not_found": "Page not found",
-  "footer": {
-    "rights": "All rights reserved",
-    "powered_by": "Powered by Next.js"
-  },
-  "navigation": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "documentation": "Documentation"
-  },
-  "features": {
-    "title": "Features",
-    "subtitle": "NextLingo makes multilingual websites simple with these powerful features",
-    "feature1": {
-      "title": "Language Routing",
-      "description": "SEO-friendly URL paths with language codes that improve discoverability and user experience"
-    },
-    "feature2": {
-      "title": "Fast Switching",
-      "description": "Seamless language switching with cookie persistence for returning visitors"
-    },
-    "feature3": {
-      "title": "Automatic Detection",
-      "description": "Smart language detection based on browser preferences and user settings"
-    }
-  },
-  "languages": {
-    "title": "Supported Languages",
-    "add_more": "Adding more languages is as easy as creating new translation files"
-  },
-  "cta": {
-    "title": "Start Building Multilingual Apps Today",
-    "description": "Use this template as a starting point for your next multilingual project. Fork the repository and customize it to fit your needs.",
-    "button": "Get Started"
-  }
+  "start_editing": "Start editing this page:"
 }

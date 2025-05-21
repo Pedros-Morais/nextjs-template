@@ -1,42 +1,8 @@
 {
-  "app_title": "NextLingo - Aplicación Multilingüe",
-  "welcome": "Crea Aplicaciones Multilingües con Next.js Fácilmente",
-  "description": "NextLingo proporciona una arquitectura limpia y escalable para crear aplicaciones multilingües con App Router de Next.js. El soporte para internacionalización (i18n) nunca ha sido tan simple.",
+  "app_title": "Plantilla Multilingüe de Next.js",
+  "hello": "Hola",
+  "welcome_message": "¡Bienvenido a esta plantilla multilingüe de Next.js! Un punto de partida limpio para tu proyecto.",
   "language_selector": "Seleccionar idioma",
   "not_found": "Página no encontrada",
-  "footer": {
-    "rights": "Todos los derechos reservados",
-    "powered_by": "Desarrollado con Next.js"
-  },
-  "navigation": {
-    "home": "Inicio",
-    "about": "Acerca de",
-    "contact": "Contacto",
-    "documentation": "Documentación"
-  },
-  "features": {
-    "title": "Características",
-    "subtitle": "NextLingo hace que los sitios web multilingües sean simples con estas potentes características",
-    "feature1": {
-      "title": "Rutas por idioma",
-      "description": "Rutas URL amigables para SEO con códigos de idioma que mejoran la visibilidad y experiencia de usuario"
-    },
-    "feature2": {
-      "title": "Cambio rápido",
-      "description": "Cambio de idioma sin interrupciones con persistencia de cookies para visitantes recurrentes"
-    },
-    "feature3": {
-      "title": "Detección automática",
-      "description": "Detección inteligente de idioma basada en preferencias del navegador y configuración del usuario"
-    }
-  },
-  "languages": {
-    "title": "Idiomas soportados",
-    "add_more": "Añadir más idiomas es tan fácil como crear nuevos archivos de traducción"
-  },
-  "cta": {
-    "title": "Comienza a crear aplicaciones multilingües hoy",
-    "description": "Usa esta plantilla como punto de partida para tu próximo proyecto multilingüe. Haz un fork del repositorio y personalízalo según tus necesidades.",
-    "button": "Comenzar"
-  }
+  "start_editing": "Empieza a editar esta página:"
 }

@@ -25,7 +25,6 @@ export function LanguageSwitcher() {
   const [currentLocale, setCurrentLocale] = useState<string>('');
   const [isOpen, setIsOpen] = useState(false);
 
-  // Set initial locale state after mount to avoid hydration mismatch
   useEffect(() => {
     setCurrentLocale(i18n.language);
   }, [i18n.language]);
@@ -34,17 +33,13 @@ export function LanguageSwitcher() {
     (newLocale: string) => {
       if (newLocale === currentLocale) return;
 
-      // Create a date 1 year from now for the cookie expiration
       const date = new Date();
       date.setFullYear(date.getFullYear() + 1);
 
-      // Set the locale cookie
       document.cookie = `NEXT_LOCALE=${newLocale};expires=${date.toUTCString()};path=/`;
 
-      // Determine the new path
       let newPath = pathname;
       
-      // Remove current locale from path if it exists
       locales.forEach(locale => {
         if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
           newPath = pathname.replace(`/${locale}`, '');
@@ -52,27 +47,23 @@ export function LanguageSwitcher() {
         }
       });
 
-      // Add new locale to the path
       if (newPath === '/') {
         newPath = `/${newLocale}`;
       } else {
         newPath = `/${newLocale}${newPath}`;
       }
 
-      // Update i18n language on the client side
       i18n.changeLanguage(newLocale);
       
-      // Close dropdown
       setIsOpen(false);
       
-      // Navigate to the new path
       router.push(newPath);
       router.refresh();
     },
     [currentLocale, i18n, pathname, router]
   );
 
-  if (!currentLocale) return null; // Avoid rendering before client-side hydration
+  if (!currentLocale) return null; 
 
   const currentLanguage = languageOptions.find(option => option.value === currentLocale) || languageOptions[0];
 
