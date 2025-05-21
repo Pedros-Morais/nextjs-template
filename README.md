@@ -53,7 +53,7 @@ A production-ready, feature-rich Next.js template designed to kickstart your mul
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/nextjs-template.git my-project
+git clone https://github.com/Pedros-Morais/nextjs-template my-project
 cd my-project
 
 # Install dependencies
